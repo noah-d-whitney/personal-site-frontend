@@ -6,6 +6,7 @@ import HomePageContainer from "@/components/layout/HomePageContainer";
 
 import PortfolioSection from "@/components/PortfolioSection";
 import CurrentRole from "@/components/CurrentRole";
+import BlogPosts from "@/components/BlogPosts";
 
 export default function Home() {
 	return (

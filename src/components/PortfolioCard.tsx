@@ -7,7 +7,7 @@ const PortfolioCard = () => {
 		<div className="flex flex-col w-full min-w-portcard border border-base-300 rounded-2xl overflow-hidden ">
 			<div className="mockup-browser border border-base-300 overflow-hidden rounded-b-none bg-neutral-200">
 				<div className="mockup-browser-toolbar "></div>
-				<div className="flex justify-center  border-t border-base-300">
+				<div className="flex justify-center border-t border-base-300">
 					<img src="/portfolio/projectcost.png" alt="project cost"></img>
 				</div>
 			</div>
