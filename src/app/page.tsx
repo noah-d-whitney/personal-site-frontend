@@ -1,95 +1,49 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import Header from "@/components/layout/Header";
+import About from "@/components/About";
+import SocialHeader from "@/components/layout/SocialHeader";
+import TechStack from "@/components/TechStack";
+import LocIcon from "public/icons/location.svg";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<>
+			<header>
+				<SocialHeader />
+				<Header />
+			</header>
+			<main>
+				<div className="m-5">
+					<div className="flex flex-col w-full lg:flex-row gap-5">
+						<div className="grid card lg:w-1/2 bg-neutral-100 rounded-box shadow-xl md:p-20 p-12 text-center md:text-left">
+							<div className="prose-2xl">
+								<h3 className="font-mono font-medium mb-2 text-neutral-400">
+									&gt; Hi,I'm
+								</h3>
+								<h1 className="font-black mb-4 text-neutral-800 leading-tight">
+									Noah Whitney
+								</h1>
+								<p className="mb-10 text-neutral-600">
+									Front-end software engineer with strong programming
+									fundamentals and design skills.
+								</p>
+								<span className="flex mb-16 text-neutral-600 items-center uppercase gap-3 text-base font-bold text-zinc-400 justify-center md:justify-start">
+									<LocIcon height={30} opacity={"50%"} />
+									Washington, DC Metro Area
+								</span>
+								<div className="flex gap-5 justify-center md:justify-start">
+									<button className="btn btn-primary">see work</button>
+									<button className="btn btn-neutral">contact</button>
+								</div>
+							</div>
+						</div>
+						<div className="grid card lg:w-1/2 bg-neutral rounded-box place-items-center shadow-xl">
+							<TechStack />
+						</div>
+					</div>
+				</div>
+			</main>
+		</>
+	);
 }
