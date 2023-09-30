@@ -2,11 +2,15 @@ import XIcon from "public/social-icons/x.svg";
 import LinkedinIcon from "public/social-icons/linkedin.svg";
 import GitHubIcon from "public/social-icons/github.svg";
 import EmailIcon from "public/social-icons/email.svg";
+import DarkModeToggle from "../DarkModeToggle";
 
 const SocialHeader = () => {
 	return (
-		<div className="m-5">
-			<ul className="flex gap-5 justify-end">
+		<div className="m-5 flex justify-between items-center">
+			<div className="">
+				<DarkModeToggle />
+			</div>
+			<ul className="flex gap-5">
 				<li>
 					<a className="link" href="#">
 						<GitHubIcon height={25} />

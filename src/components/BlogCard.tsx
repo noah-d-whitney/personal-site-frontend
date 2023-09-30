@@ -1,7 +1,7 @@
 const BlogCard = () => {
 	return (
 		<div className="flex flex-col">
-			<div className="w-full h-60 bg-neutral-400 rounded-box mb-4 overflow-hidden">
+			<div className="w-full h-3/4 bg-neutral-400 rounded-box mb-4 overflow-hidden">
 				<img
 					src="/blog/blog-ph.jpg"
 					alt="alt"
@@ -14,7 +14,7 @@ const BlogCard = () => {
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
 					praesentium obcaecati nesciunt id ullam quisquam
 				</p>
-				<a href="#" className="link text-primary underline-offset-4">
+				<a href="#" className="link text-primary underline-offset-4 mt-10">
 					Read more...
 				</a>
 			</div>
