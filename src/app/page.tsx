@@ -9,6 +9,7 @@ import CurrentRole from "@/components/CurrentRole";
 import BlogPosts from "@/components/BlogPosts";
 import ContactFormCard from "@/components/ContactFormCard";
 import BioCard from "@/components/BioCard";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export default function Home() {
 	return (
@@ -39,15 +40,16 @@ export default function Home() {
 					<BlogPosts />
 				</HomePageContainer>
 				<HomePageContainer>
-					<div className="flex flex-col w-full lg:flex-row gap-5">
-						<div className="card lg:w-1/2 bg-neutral rounded-box shadow-xl">
+					<div className="flex flex-col w-full xl:flex-row gap-5">
+						<div className="card xl:w-1/2 bg-neutral rounded-box shadow-xl">
 							<ContactFormCard />
 						</div>
-						<div className="card lg:w-1/2 bg-neutral-100 rounded-box shadow-xl">
+						<div className="card xl:w-1/2 bg-white rounded-box shadow-xl">
 							<BioCard />
 						</div>
 					</div>
 				</HomePageContainer>
+				<ScrollToTop />
 			</main>
 		</>
 	);

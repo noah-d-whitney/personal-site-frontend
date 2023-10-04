@@ -1,6 +1,7 @@
 "use client";
 
 import { Download } from "@mui/icons-material";
+import Logo from "public/logo.svg";
 
 const Header = () => {
 	return (
@@ -39,9 +40,9 @@ const Header = () => {
 							</li>
 						</ul>
 					</div>
-					<a className="btn btn-ghost normal-case text-xl hidden sm:flex">
-						Noah Whitney
-					</a>
+					<button className="btn btn-ghost hidden sm:flex">
+						<Logo height={30} />
+					</button>
 				</div>
 				<div className="navbar-center hidden lg:flex">
 					<ul className="menu menu-horizontal px-1">
