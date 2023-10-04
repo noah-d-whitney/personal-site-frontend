@@ -4,7 +4,7 @@ import useScroll from "@/hooks/useScroll";
 import UpIcon from "public/icons/up.svg";
 
 const ScrollToTop = () => {
-	const [isScrolled, scrollToTop] = useScroll();
+	const { isScrolled, scrollToTop } = useScroll();
 
 	return (
 		<>

@@ -13,7 +13,7 @@ const ContactFormCard = () => {
 	}
 
 	return (
-		<div className="w-full p-12">
+		<div id="contact" className="w-full p-12">
 			<div className="prose mb-4">
 				<h1 className="text-neutral-100">Contact Me</h1>
 				<p className="text-neutral-200">

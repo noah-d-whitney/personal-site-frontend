@@ -3,9 +3,10 @@
 import { Download } from "@mui/icons-material";
 import Logo from "public/logo.svg";
 import useScroll from "@/hooks/useScroll";
+import Navigation from "./Navigation";
 
 const StickyHeader = () => {
-	const [isScrolled] = useScroll();
+	const { isScrolled } = useScroll();
 
 	return (
 		<div
@@ -37,15 +38,7 @@ const StickyHeader = () => {
 								tabIndex={0}
 								className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 							>
-								<li>
-									<a>about</a>
-								</li>
-								<li>
-									<a>work</a>
-								</li>
-								<li>
-									<a>blog</a>
-								</li>
+								<Navigation />
 							</ul>
 						</div>
 						<button className="btn btn-ghost hidden sm:flex">
@@ -54,15 +47,7 @@ const StickyHeader = () => {
 					</div>
 					<div className="navbar-center hidden lg:flex">
 						<ul className="menu menu-horizontal px-1">
-							<li>
-								<a>about</a>
-							</li>
-							<li>
-								<a>work</a>
-							</li>
-							<li>
-								<a>blog</a>
-							</li>
+							<Navigation />
 						</ul>
 					</div>
 					<div className="navbar-end gap-3">

@@ -2,7 +2,10 @@ import SkillTags from "./SkillTags";
 
 const BioCard = () => {
 	return (
-		<div className="flex flex-col justify-between align-center w-full p-12 lg:p-20 gap-10">
+		<div
+			id="about"
+			className="flex flex-col justify-between align-center w-full p-12 lg:p-20 gap-10"
+		>
 			<div className="prose-2xl">
 				<h1 className="font-black mb-4 text-neutral-800 leading-tight">
 					About Me

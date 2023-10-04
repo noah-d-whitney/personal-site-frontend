@@ -2,7 +2,10 @@ import ViewIcon from "public/icons/view.svg";
 
 const CurrentRole = () => {
 	return (
-		<div className="flex flex-col w-full gap-5 p-6 bg-primary rounded-box shadow-xl">
+		<div
+			id="experience"
+			className="flex flex-col w-full gap-5 p-6 bg-primary rounded-box shadow-xl"
+		>
 			<div className="prose text-center self-center m-5">
 				<h1 className="text-neutral-100">Experience</h1>
 			</div>

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
-const useScroll = (): [boolean, () => void] => {
+const useScroll = (): {
+	isScrolled: boolean;
+	scrollToTop: () => void;
+	scrollTo: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+} => {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 	const [isBottom, setIsBottom] = useState<boolean>(false);
 
@@ -11,6 +15,25 @@ const useScroll = (): [boolean, () => void] => {
 		});
 	}
 
+	const scrollTo = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+		e.preventDefault();
+		console.log("TEST");
+		const href = e.currentTarget.href;
+		const targetId = href.replace(/.*\#/, "");
+		const element = document.getElementById(targetId);
+		const offset = 90;
+
+		if (!element) return;
+
+		window.scrollTo({
+			behavior: "smooth",
+			top:
+				element.getBoundingClientRect().top -
+				document.body.getBoundingClientRect().top -
+				offset,
+		});
+	};
+
 	useEffect(() => {
 		const checkScroll = setInterval(() => {
 			if (window.scrollY >= 800) setIsScrolled(true);
@@ -20,7 +43,7 @@ const useScroll = (): [boolean, () => void] => {
 		return () => clearInterval(checkScroll);
 	});
 
-	return [isScrolled, scrollToTop];
+	return { isScrolled, scrollToTop, scrollTo };
 };
 
 export default useScroll;
