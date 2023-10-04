@@ -10,6 +10,8 @@ import BlogPosts from "@/components/BlogPosts";
 import ContactFormCard from "@/components/ContactFormCard";
 import BioCard from "@/components/BioCard";
 import ScrollToTop from "@/components/layout/ScrollToTop";
+import Footer from "@/components/layout/Footer";
+import StickyHeader from "@/components/layout/StickyHeader";
 
 export default function Home() {
 	return (
@@ -17,6 +19,7 @@ export default function Home() {
 			<header>
 				<SocialHeader />
 				<Header />
+				<StickyHeader />
 			</header>
 			<main>
 				<HomePageContainer>
@@ -51,6 +54,7 @@ export default function Home() {
 				</HomePageContainer>
 				<ScrollToTop />
 			</main>
+			<Footer />
 		</>
 	);
 }

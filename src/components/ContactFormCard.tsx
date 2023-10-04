@@ -79,13 +79,13 @@ const ContactFormCard = () => {
 					/>
 				</div>
 				<div className="form-control mb-10">
-					<label className="label" htmlFor="bio-field">
+					<label className="label" htmlFor="message-field">
 						<span className="label-text text-neutral-300">Message</span>
 					</label>
 					<textarea
-						className="textarea textarea-bordered h-24"
-						placeholder="Bio"
-						id="bio-field"
+						className="textarea textarea-bordered h-24 text-base"
+						placeholder="Message"
+						id="message-field"
 						required
 					></textarea>
 				</div>

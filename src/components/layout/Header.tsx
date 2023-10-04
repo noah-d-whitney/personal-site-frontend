@@ -1,9 +1,12 @@
 "use client";
 
+import useScroll from "@/hooks/useScroll";
 import { Download } from "@mui/icons-material";
 import Logo from "public/logo.svg";
 
 const Header = () => {
+	const [isScrolled] = useScroll();
+
 	return (
 		<div className="m-5 shadow-xl rounded-lg">
 			<div className="navbar bg-base-100 rounded-lg p-3">
