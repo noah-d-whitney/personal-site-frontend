@@ -7,6 +7,8 @@ import HomePageContainer from "@/components/layout/HomePageContainer";
 import PortfolioSection from "@/components/PortfolioSection";
 import CurrentRole from "@/components/CurrentRole";
 import BlogPosts from "@/components/BlogPosts";
+import ContactFormCard from "@/components/ContactFormCard";
+import BioCard from "@/components/BioCard";
 
 export default function Home() {
 	return (
@@ -35,6 +37,16 @@ export default function Home() {
 				</HomePageContainer>
 				<HomePageContainer>
 					<BlogPosts />
+				</HomePageContainer>
+				<HomePageContainer>
+					<div className="flex flex-col w-full lg:flex-row gap-5">
+						<div className="card lg:w-1/2 bg-neutral rounded-box shadow-xl">
+							<ContactFormCard />
+						</div>
+						<div className="card lg:w-1/2 bg-neutral-100 rounded-box shadow-xl">
+							<BioCard />
+						</div>
+					</div>
 				</HomePageContainer>
 			</main>
 		</>
