@@ -1,7 +1,13 @@
+"use client";
+
 import LocIcon from "public/icons/location.svg";
 import EmailIcon from "public/icons/email-filled.svg";
+import Link from "next/link";
+import useScroll from "@/hooks/useScroll";
 
 const About = () => {
+	const { scrollTo } = useScroll();
+
 	return (
 		<div className="prose-2xl">
 			<h3 className="font-mono font-medium mb-2 text-neutral-400">
@@ -19,11 +25,13 @@ const About = () => {
 				Washington, DC Metro Area
 			</span>
 			<div className="flex gap-5 justify-center md:justify-start">
-				<button className="btn btn-primary">see work</button>
-				<button className="btn btn-neutral">
+				<Link href="#work" onClick={scrollTo} className="btn btn-primary">
+					see work
+				</Link>
+				<Link href="#contact" onClick={scrollTo} className="btn btn-neutral">
 					<EmailIcon width={20} />
 					contact
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

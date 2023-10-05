@@ -12,11 +12,11 @@ const StickyHeader = () => {
 
 	return (
 		<div
-			className={`z-10 px-3 w-full fixed transition-all ${
-				isScrolled ? "top-3" : "-top-20"
+			className={`z-10 px-3 w-full flex justify-center fixed transition-all ${
+				isScrolled ? "top-5" : "-top-40"
 			} `}
 		>
-			<div className="z-10 shadow-2xl rounded-lg w-full">
+			<div className="z-10 shadow-2xl rounded-lg w-full xl:w-3/4">
 				<div className="navbar bg-base-100 rounded-lg p-3">
 					<div className="navbar-start">
 						<MobileNav />

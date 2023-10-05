@@ -4,9 +4,9 @@ const BioCard = () => {
 	return (
 		<div
 			id="about"
-			className="flex flex-col justify-between align-center w-full p-12 lg:p-20 gap-10"
+			className="flex h-full flex-col justify-between align-center w-full p-12 lg:p-20 gap-10"
 		>
-			<div className="prose-2xl">
+			<div className="prose-xl">
 				<h1 className="font-black mb-4 text-neutral-800 leading-tight">
 					About Me
 				</h1>
