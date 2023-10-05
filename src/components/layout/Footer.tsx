@@ -1,20 +1,27 @@
+"use client";
+
+import useScroll from "@/hooks/useScroll";
 import SocialButtons from "../SocialButtons";
+import Link from "next/link";
 
 const Footer = () => {
+	const { scrollTo } = useScroll();
 	return (
 		<footer className="w-full bg-neutral">
-			<div className="py-6 px-12 grid grid-cols-3 items-center">
-				<ul className="flex gap-10 text-neutral-200 justify-self-start">
+			<div className="py-6 px-12 flex flex-col gap-5 items-center">
+				<ul className="flex gap-8 text-neutral-200 justify-self-start">
 					<li>
-						<a href="/">Blog</a>
+						<Link href="#">Blog</Link>
 					</li>
 					<li>
-						<a href="/">Contact</a>
+						<Link href="#contact" onClick={scrollTo}>
+							Contact
+						</Link>
 					</li>
+					<div className="justify-self-center">
+						<SocialButtons />
+					</div>
 				</ul>
-				<div className="justify-self-center">
-					<SocialButtons />
-				</div>
 				<span className="text-neutral-400 justify-self-end">
 					Copyright &copy; 2023 by Noah Whitney
 				</span>
