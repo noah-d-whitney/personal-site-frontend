@@ -35,7 +35,6 @@ export default function Home() {
 				<HomePageContainer>
 					<PortfolioSection />
 				</HomePageContainer>
-				{/* TODO refactor into role cards */}
 				<HomePageContainer>
 					<CurrentRole />
 				</HomePageContainer>
