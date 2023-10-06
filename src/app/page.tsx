@@ -1,6 +1,4 @@
-import Header from "@/components/layout/Header";
 import About from "@/components/About";
-import SocialHeader from "@/components/layout/SocialHeader";
 import TechStack from "@/components/TechStack";
 import HomePageContainer from "@/components/layout/HomePageContainer";
 
@@ -9,18 +7,10 @@ import CurrentRole from "@/components/CurrentRole";
 import BlogPosts from "@/components/BlogPosts";
 import ContactFormCard from "@/components/ContactFormCard";
 import BioCard from "@/components/BioCard";
-import ScrollToTop from "@/components/layout/ScrollToTop";
-import Footer from "@/components/layout/Footer";
-import StickyHeader from "@/components/layout/StickyHeader";
 
 export default function Home() {
 	return (
 		<>
-			<header>
-				<SocialHeader />
-				<Header />
-				<StickyHeader />
-			</header>
 			<main>
 				<HomePageContainer>
 					<div className="flex flex-col w-full lg:flex-row gap-5">
@@ -51,9 +41,7 @@ export default function Home() {
 						</div>
 					</div>
 				</HomePageContainer>
-				<ScrollToTop />
 			</main>
-			<Footer />
 		</>
 	);
 }

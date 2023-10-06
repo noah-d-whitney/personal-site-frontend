@@ -11,27 +11,27 @@ const Navigation = (props: NavigationProps) => {
 	return (
 		<>
 			<li>
-				<Link href="#work" onClick={handleClick}>
+				<Link href="/" onClick={handleClick}>
 					work
 				</Link>
 			</li>
 			<li>
-				<Link href="#experience" onClick={handleClick}>
+				<Link href="/#experience" onClick={handleClick}>
 					experience
 				</Link>
 			</li>
 			<li>
-				<Link href="#contact" onClick={handleClick}>
+				<Link href="/#contact" onClick={handleClick}>
 					contact
 				</Link>
 			</li>
 			<li>
-				<Link href="#about" onClick={handleClick}>
+				<Link href="/#about" onClick={handleClick}>
 					about
 				</Link>
 			</li>
 			<li>
-				<Link href="#">blog</Link>
+				<Link href="/blog">blog</Link>
 			</li>
 		</>
 	);

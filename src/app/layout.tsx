@@ -1,6 +1,11 @@
+import SocialHeader from "@/components/layout/SocialHeader";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "@/components/layout/Header";
+import StickyHeader from "@/components/layout/StickyHeader";
+import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,16 @@ export default function RootLayout({
 }) {
 	return (
 		<html data-theme="light" lang="en">
-			<body className="bg-neutral-100">{children}</body>
+			<body className="bg-neutral-100">
+				<header>
+					<SocialHeader />
+					<Header />
+					<StickyHeader />
+					<ScrollToTop />
+				</header>
+				<main>{children}</main>
+				<Footer />
+			</body>
 		</html>
 	);
 }
