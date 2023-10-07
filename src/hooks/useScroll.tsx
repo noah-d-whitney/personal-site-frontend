@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const useScroll = (): {
@@ -16,22 +17,29 @@ const useScroll = (): {
 	}
 
 	const scrollTo = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-		e.preventDefault();
-		console.log("TEST");
-		const href = e.currentTarget.href;
-		const targetId = href.replace(/.*\#/, "");
-		const element = document.getElementById(targetId);
-		const offset = 90;
+		const currentPath = location.pathname;
 
-		if (!element) return;
+		if (currentPath === "/") {
+			e.preventDefault();
 
-		window.scrollTo({
-			behavior: "smooth",
-			top:
-				element.getBoundingClientRect().top -
-				document.body.getBoundingClientRect().top -
-				offset,
-		});
+			// check if current path is "/"
+			const href = e.currentTarget.href;
+			const targetId = href.replace(/.*\#/, "");
+			const element = document.getElementById(targetId);
+			const offset = 90;
+
+			if (!element) return;
+
+			window.scrollTo({
+				behavior: "smooth",
+				top:
+					element.getBoundingClientRect().top -
+					document.body.getBoundingClientRect().top -
+					offset,
+			});
+		} else {
+			window.scrollBy(0, -90);
+		}
 	};
 
 	useEffect(() => {

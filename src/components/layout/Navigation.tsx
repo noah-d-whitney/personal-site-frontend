@@ -11,7 +11,7 @@ const Navigation = (props: NavigationProps) => {
 	return (
 		<>
 			<li>
-				<Link href="/" onClick={handleClick}>
+				<Link href="/#work" onClick={handleClick}>
 					work
 				</Link>
 			</li>

@@ -10,7 +10,7 @@ const ScrollToTop = () => {
 		<>
 			<button
 				onClick={scrollToTop}
-				className={`btn btn-circle btn-md md:btn-lg btn-accent shadow-xl fixed transition-all ${
+				className={`btn btn-circle btn-md md:btn-lg btn-accent shadow-xl fixed transition-all z-50 ${
 					isScrolled
 						? "bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8"
 						: "bottom-4 -right-20 md:bottom-6 lg:bottom-8"
